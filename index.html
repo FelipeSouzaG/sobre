@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
+    <title>Felipe Galvão</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" 
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./estilos.css">
+  </head>
+  <body data-bs-theme="light">
+    <header>
+      <nav class="navbar-expand-lg navbar bg-body-tertiary fixed-top">
+        <div id="inicio" class="container-fluid">
+          <a class="navbar-brand profile" href="#"><img src="./assets/profile.jpg"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Felipe de Souza Galvão</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#sobre">Sobre</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#certificados">Certificados</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#f">Contato</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <div class="form-check form-switch">
+                      <input class="form-check-input" type="checkbox" role="switch" id="modo-noturno">
+                      <label class="form-check-label" for="modo-noturno">Modo Noturno</label>
+                    </div>
+                  </a>
+                </li>
+              </ul>                
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+
+      <section class="banners banner-1 d-flex flex-column justify-content-center text-center">
+        <div class="banners-titulo bg-body-secondary py-5">
+          <h2 class="fw-bold">Obrigado por vir aqui!</h2>
+          <h5 class="fw-bold">Felipe de Souza Galvão</h5>
+          <p class="fw-bold">37 anos, casado e 2 filhos.</p> 
+          <p class="fw-bold">Residente em Belo Horizonte/MG</p><br>
+          <p class="fw-bold">Siga para mais informações</p>
+        </div>
+      </section>
+      <div id="sobre"><br><br></div>
+      <section class="py-5">
+        <h2 class="text-center fw-bold pb-1">Sobre</h2>
+        <div class="container d-flex justify-content-around flex-wrap">
+          <div class="card m-4" style="width: 20rem;">
+            <img src="./assets/trajetoria.png" class="card-img-top"
+              alt="Imagens de lavaura de café, oficina mecânica, Tubos petrolíferos e montagem de carro">
+            <div class="card-body">
+              <h5 class="card-title py-2 fw-bold">Trajetória profissional</h5>
+              <p class="card-text">Lavrador de café de 12 a 15 anos e ajudante de oficina mecânica de 16 a 18 anos na cidade de Manhuaçu.</p>
+              <p class="card-text">Auxiliar fiscal em contabilidade, garçom e operador de processo industrial dos 19 aos 23 anos em Belo Horizonte.</p>
+              <p class="card-text">Operador de processo industrial, inspetor de qualidade e Team Leader de produção dos 24 aos 37 anos em Betim.</p>
+              <a href="#" class="btn botao-padrao w-100 fw-bold" data-bs-toggle="offcanvas" data-bs-target="#canvas-1" aria-controls="offcanvasRight">+ detalhes</a>
+            </div>
+          </div> 
+          
+          <div class="card m-4" style="width: 20rem;">
+            <img src="./assets/diplomas.jpg" class="card-img-top" alt="Capelo e diploma de formatura">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Formações e Cursos</h5>
+              <p class="card-text">
+                2º grau em escola pública.<br>
+                Curso Técnico em Informática.<br>
+                Gestão da Produção Industrial.
+              </p>
+              <a href="#" class="btn botao-padrao w-100 fw-bold mt-3" data-bs-toggle="offcanvas" data-bs-target="#canvas-2" aria-controls="offcanvasRight">+ detalhes</a>
+            </div>
+          </div>
+
+          <div class="card m-4" style="width: 20rem;">
+            <img src="./assets/tecnologia.gif" class="card-img-top" alt="Notebook com códigos de programação">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Mudança de carreira</h5>
+              <p class="card-text">Empenho no aprendizado na Escola Front-end da Alura.</p>
+              <a href="#" class="btn botao-padrao w-100 fw-bold mt-3" data-bs-toggle="offcanvas" data-bs-target="#canvas-3" aria-controls="offcanvasRight">+ detalhes</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div id="certificados"><br><br></div>
+      <section class="d-flex flex-column justify-content-center text-center align-items-center">
+        <div class="car">
+          <h3 class="fw-bold">Certificados Front-end</h3>
+          <div id="carouselExampleIndicators" class="carousel slide">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 7"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7" aria-label="Slide 8"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="8" aria-label="Slide 9"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./certificates/c1.svg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./certificates/c2.svg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./certificates/c3.svg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./certificates/c4.svg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./certificates/c5.svg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./certificates/c6.svg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./certificates/c7.svg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./certificates/c8.svg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./certificates/c9.svg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div> 
+        </div>
+      </section>
+
+      <section class="d-flex flex-column justify-content-center text-center align-items-center">
+        <div class="car">
+          <h3 class="fw-bold">Certificados Back-end</h3>
+          <div id="carouselExampleIndicators1" class="carousel slide">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./certificates/b1.svg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./certificates/b2.svg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./certificates/b3.svg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./certificates/b4.svg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./certificates/b5.svg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./certificates/b6.svg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div> 
+        </div>
+      </section>
+      <div id="f"><br><br><br></div>
+      <section class="py-4 container">
+        <div class="border border-2 rounded p-3">
+          <div class="rol col-10 mx-auto">
+            <div class="col col-xl-8 mx-auto">
+              <h3 class="fw-bold p-3">Entre em contato</h3>
+              <form>
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" id="name" placeholder="Nome">
+                  <label for="name">Nome</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input type="mail" class="form-control" id="mail" placeholder="exemplo@email.com">
+                  <label for="mail">Email</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input type="number" class="form-control" id="phone" placeholder="Telefone">
+                  <label for="phone">Telefone</label>
+                </div>
+                <select class="form-select mb-3" id="contact" aria-label="Default select example">
+                  <option selected>Preferência de contato:</option>
+                  <option value="Wattsapp">Wattsapp</option>
+                  <option value="Email">Email</option>
+                  <option value="Ligação">Ligação</option>
+                </select>
+                <label for="satisfaction" class="form-label">Nível de satisfação:</label>
+                <input type="range" class="form-range" id="satisfaction">
+                <div class="form-check mb-3">
+                  <input class="form-check-input" id="like" type="checkbox">
+                  <label class="form-check-label" for="like">
+                    Gostou do que viu? Seu feedback é muito importante para meu inicio de carreira. Se preferir, use o Wattsapp abaixo.
+                  </label>
+                </div>
+                <div class="card-body" data-bs-toggle="modal" data-bs-target="#send">
+                  <button type="submit" class="fel-1 btn botao-padrao w-100 fw-bold mt-3 py-3" id="fel">
+                    Enviar
+                  </button> 
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="text-center">
+      <section class="container p-4 pb-0">
+        <a href="https://web.whatsapp.com/send?phone=5531986116406" target="_blank" class="btn"><i class="bi bi-whatsapp"></i></a>
+        <a href="https://github.com/FelipeSouzaG" class="btn" target="_blank"><i class="bi bi-github"></i></a>
+        <a href="https://www.linkedin.com/in/felipe-galvão-50a174b2" class="btn" target="_blank"><i class="bi bi-linkedin"></i></a>
+        <div class="p-3">
+          2024 <i class="bi bi-c-circle"></i> Desenvolvido por Felipe Galvão | Bootstrap
+        </div>
+      </section>
+
+    </footer>
+
+    <!-- Canvas -->
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="canvas-1" aria-labelledby="offcanvasRightLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasRightLabel">Trajetória profissional</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button botao-padrao" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Lavrador de Café
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                No vilarejo de Ponte do Silva, na cidade de Manhuaçu, era comum os adolescentes trabalharem meio período após a escola no ensino fundamental. A rotina de trabalho na lavoura de café anual passava por plantio, adubação, capina, colheita, entre outras atividades.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button botao-padrao collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Auxiliar de oficina mecânica
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                Após o ensino fundamental, tínhamos que deslocar para a cidade de Manhuaçu para estudar o 2º Grau. Por lá, trabalhei em uma oficina mecânica de ajudante mecânico.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button botao-padrao collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Auxiliar Fiscal e Garçon
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                Após o 2º grau concluído, trabalhei em contabilidade de auxiliar fiscal em período integral de 2ª a 6ª e três vezes por semana, trabalhava de garçom em período noturno em um bar chamado Soho Pub.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button botao-padrao collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                Operador de processo industrial
+              </button>
+            </h2>
+            <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                Tive a oportunidade de trabalhar na indústria de revestimento de tubos para petróleo e gás. As atividades eram de jateamento, aplicação de prime e revestimento de polietileno e polipropileno. Além de operações de acabamento e reparação.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button botao-padrao collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                Ultima experiência profissional
+              </button>
+            </h2>
+            <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                Em 2011, entrei para a Fiat Automóveis como operador de processo industrial na oficina de funilaria. Minha atividade era soldagem a ponto das carrocerias. Em 2012, passei no processo interno para inspetor de qualidade de materiais do fornecedor na oficina de prensas e funilaria. As atividades realizadas eram de avaliação e ensaios de laminados e avaliação em problemas de qualidade de peças de carrocerias vindas do fornecedor.<br>
+                Em 2017, passei no processo interno para Team Leader de Produção. Nesse cargo, atividades de gestão como desenvolvimento e capacitação de operadores, balanceamento de linha e mix produtivo, como ferramentas como: WCM, Kaizen, 5S entre outras.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="canvas-2" aria-labelledby="offcanvasRightLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasRightLabel">Formações e Cursos</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button botao-padrao" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Curso Técnico de Informática
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                Após terminar o 2º grau, comecei o curso técnico de informática na Escola Politécnica de Minas Gerais (Polimig). Os módulos estudados foram: Manutenção e configuração de hardware, HTML, CSS e JavaScript, Lógica de Programação e Java. 
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button botao-padrao collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Gestão da Produção Industrial
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                Com o avanço na carreira de manufatura, entrei para a Universidade Estácio de Sá, onde formei em 2022. Com o fim do meu ciclo na Fiat em outubro de 2023, tenho me empenhado na Alura para aprender os cursos de tecnologia desde dezembro de 2023.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="canvas-3" aria-labelledby="offcanvasRightLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasRightLabel">Alura</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button botao-padrao" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Escola Front-end
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                Iniciei os estudos em Dezembro de 2023 e até o momento fiz 16 cursos e alguns artigos. Até o momento fiz aulas de HTML, CSS e JavaScript com layout responsivo com Grid e Flex box. Após essas aulas, desenvolvi meu primeiro projeto de treinamento retirado do <a href="https://dribbble.com/shots/22604632-Todo-Website-Todo-App" target="_blank">Dribbble</a>. <a href="https://activities-list.vercel.app/" target="_blank">Aqui está</a> o desenvolvimento. Fique a vontade para conferir as práticas e o código no meu <a href="https://github.com/FelipeSouzaG" target="_blank">GitHub</a> desse projeto.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button botao-padrao collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Proximos passos
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                Aprimoramento de Bootstrap, Angular e React. Após estudar esses frameworks pretendo estudar JavaScript para Back-end, Node.Js e SQL na Alura caso o futuro não reserve algo diferente.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+
+    <div class="modal fade" id="send" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title fs-5" id="send-msg">Dados enviados com sucesso! Muito obrigado!</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-footer mx-auto">
+            <button type="button" onclick="sendClick()" class="btn btn-secondary botao-padrao border-0" data-bs-dismiss="modal">OK</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="error" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title fs-5" id="error-msg">Falha no envio dos dados!</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-footer mx-auto">
+            <button type="button" class="btn btn-secondary botao-padrao border-0" data-bs-dismiss="modal">OK</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+      crossorigin="anonymous">
+    </script>
+    <script src="./script.js"></script>
+  </body>
+</html>
