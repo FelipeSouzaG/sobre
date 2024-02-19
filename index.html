@@ -235,7 +235,7 @@
                 <div class="form-check mb-3">
                   <input class="form-check-input" id="like" type="checkbox">
                   <label class="form-check-label" for="like">
-                    Gostou do que viu? Seu feedback é muito importante para meu inicio de carreira. Se preferir, use o Wattsapp abaixo.
+                    Gostou do que viu? Seu feedback é muito importante. Se preferir, use o Wattsapp abaixo.
                   </label>
                 </div>
                 <div class="card-body" data-bs-toggle="modal" data-bs-target="#send">
@@ -413,25 +413,11 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h2 class="modal-title fs-5" id="send-msg">Dados enviados com sucesso! Muito obrigado!</h2>
+            <h2 class="modal-title fs-5" id="send-msg">Dados</h2>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-          <div class="modal-footer mx-auto">
-            <button type="button" onclick="sendClick()" class="btn btn-secondary botao-padrao border-0" data-bs-dismiss="modal">OK</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="modal fade" id="error" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h2 class="modal-title fs-5" id="error-msg">Falha no envio dos dados!</h2>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-footer mx-auto">
-            <button type="button" class="btn btn-secondary botao-padrao border-0" data-bs-dismiss="modal">OK</button>
+          <div id="button-error" class="modal-footer mx-auto">
+            <button type="button" onclick="sendClick()" class="btn btn-secondary botao-padrao border-0" data-bs-dismiss="modal"></button>
           </div>
         </div>
       </div>
