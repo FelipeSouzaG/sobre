@@ -16,9 +16,16 @@ const removeLoading = () => {
     button.innerHTML = 'Enviar';
 }
 
+function errorMsg(bnt, evt, msg) {
+    let message = document.getElementById('send-msg');
+    let button = document.getElementById('button-error');
+    button.innerHTML = `<button type="button" onclick="${evt}" class="btn btn-secondary botao-padrao border-0" data-bs-dismiss="modal">${bnt}</button>`;
+    message.innerHTML = `${msg}`;
+}
+
 const handleSubmit = (event) => {
     event.preventDefault();
-    
+
     const name = document.getElementById('name').value;
     const mail = document.getElementById('mail').value;
     const phone = document.getElementById('phone').value;
@@ -26,41 +33,39 @@ const handleSubmit = (event) => {
     const satisfaction = document.getElementById('satisfaction').value;
     const like = document.getElementById('like').checked ? 'Sim' : 'Não';
 
-    const msg = document.getElementById('send-msg');
+    if (name===""){
+        errorMsg('Nome','' , 'Preciso saber seu nome');
+    }else if(mail===""){
+        errorMsg('E-mail','' , 'Digite seu e-mail por favor!');
+    }else if(phone===""){
+        errorMsg('Telefone','' , 'Digite seu telefone por favor!');
+    }else if(contact==="Preferência de contato:"){
+        errorMsg('Preferência de contato','' , 'Selecione o tipo de contato para retorno por favor!');
+    }else{
 
-    if(name != ""){
+        addLoading();    
 
-        if(mail != "" || phone != ""){
+        fetch('https://api.sheetmonkey.io/form/6KQ8dDRaVNhm1WRV7EXtCu', {
 
-            addLoading();
+            method: 'post',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({name, mail, phone, contact, satisfaction, like}),
+        })
 
-            fetch('https://api.sheetmonkey.io/form/6KQ8dDRaVNhm1WRV7EXtCu', {
-        
-                method: 'post',
-                headers: {
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({name, mail, phone, contact, satisfaction, like}),
-            }).then(() => removeLoading());
-            
-        } else{
-            msg.innerHTML = 'Digite o e-mail ou telefone para retornar o contato';
-        }
+        removeLoading();
 
-    } else {
-        msg.innerHTML = 'Preciso saber seu nome';    
+        errorMsg('Obrigado!','sendClick()' , 'Dados enviados com sucesso!');
+
     }
 }
 
 document.querySelector('form').addEventListener('submit', handleSubmit);
 
 function sendClick(){
+   
+    document.querySelector('form').reset();
 
-    document.getElementById('name').value = "";
-    document.getElementById('mail').value = "";
-    document.getElementById('phone').value = "";
-    document.getElementById('contact').value = "Preferência de contato:";
-    document.getElementById('satisfaction').value = 50;
-    document.getElementById('like').checked = false; 
 }
