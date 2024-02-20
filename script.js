@@ -23,6 +23,35 @@ function errorMsg(bnt, evt, msg) {
     message.innerHTML = `${msg}`;
 }
 
+const validMail = (mail) => {
+    let valid = /\S+@\S+\.\S+/;
+    return valid.test(mail);
+}
+
+
+function mascara(o,f){
+    v_obj=o
+    v_fun=f
+    setTimeout("execmascara()",1)
+}
+function execmascara(){
+    v_obj.value=v_fun(v_obj.value)
+}
+function mtel(v){
+    v=v.replace(/\D/g,"");
+    v=v.replace(/^(\d{2})(\d)/g,"($1) $2");
+    v=v.replace(/(\d)(\d{4})$/,"$1-$2");
+    return v;
+}
+function id( el ){
+	return document.getElementById( el );
+}
+window.onload = function(){
+	id('phone').onkeyup = function(){
+		mascara( this, mtel );
+	}
+}
+
 const handleSubmit = (event) => {
     event.preventDefault();
 
@@ -33,12 +62,19 @@ const handleSubmit = (event) => {
     const satisfaction = document.getElementById('satisfaction').value;
     const like = document.getElementById('like').checked ? 'Sim' : 'Não';
 
+    let response = validMail(mail);
+
     if (name===""){
         errorMsg('Nome','' , 'Preciso saber seu nome');
     }else if(mail===""){
         errorMsg('E-mail','' , 'Digite seu e-mail por favor!');
-    }else if(phone===""){
+    }else if(!response){
+        errorMsg('E-mail','' , 'Digite o e-mail válido por favor!');
+    }    
+    else if(phone===""){
         errorMsg('Telefone','' , 'Digite seu telefone por favor!');
+    }else if(phone.length < 15){
+        errorMsg('Telefone','' , 'Digite seu telefone no formato DD + Nº por favor!');
     }else if(contact==="Preferência de contato:"){
         errorMsg('Preferência de contato','' , 'Selecione o tipo de contato para retorno por favor!');
     }else{
