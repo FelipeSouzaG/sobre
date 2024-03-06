@@ -89,8 +89,8 @@ const handleSubmit = (event) => {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({name, mail, phone, contact, satisfaction, like}),
-        }),2500)
-	       setTimeout(removeLoading,2000);
+        })
+	setTimeout(removeLoading,2000);
 
     }
 	errorMsg('Obrigado!','sendClick()' , 'Dados enviados com sucesso!');
