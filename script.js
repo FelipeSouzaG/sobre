@@ -90,16 +90,16 @@ const handleSubmit = (event) => {
             },
             body: JSON.stringify({name, mail, phone, contact, satisfaction, like}),
         })
-	setTimeout(removeLoading,2000);
+	
+	setTimeout(removeLoading, 2000);
+	errorMsg('Obrigado!','sendClick()' , 'Dados enviados com sucesso!');
 
     }
-	errorMsg('Obrigado!','sendClick()' , 'Dados enviados com sucesso!');
+	
 }
 
 document.querySelector('form').addEventListener('submit', handleSubmit);
 
 function sendClick(){
-   
     document.querySelector('form').reset();
-
 }
