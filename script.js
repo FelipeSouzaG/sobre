@@ -54,8 +54,6 @@ window.onload = function(){
 
 const handleSubmit = (event) => {
     event.preventDefault();
-
-    addLoading();
 	
     const name = document.getElementById('name').value;
     const mail = document.getElementById('mail').value;
@@ -81,7 +79,9 @@ const handleSubmit = (event) => {
         errorMsg('Preferência de contato','' , 'Selecione o tipo de contato para retorno por favor!');
     }else{
 
-        fetch('https://api.sheetmonkey.io/form/6KQ8dDRaVNhm1WRV7EXtCu', {
+	    addLoading();
+	    
+       fetch('https://api.sheetmonkey.io/form/6KQ8dDRaVNhm1WRV7EXtCu', {
 
             method: 'post',
             headers: {
@@ -89,13 +89,11 @@ const handleSubmit = (event) => {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({name, mail, phone, contact, satisfaction, like}),
-        })
-
-        removeLoading();
-
-        errorMsg('Obrigado!','sendClick()' , 'Dados enviados com sucesso!');
+        }),2500)
+	       setTimeout(removeLoading,2000);
 
     }
+	errorMsg('Obrigado!','sendClick()' , 'Dados enviados com sucesso!');
 }
 
 document.querySelector('form').addEventListener('submit', handleSubmit);
