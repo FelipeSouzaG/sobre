@@ -55,6 +55,8 @@ window.onload = function(){
 const handleSubmit = (event) => {
     event.preventDefault();
 
+    addLoading();
+	
     const name = document.getElementById('name').value;
     const mail = document.getElementById('mail').value;
     const phone = document.getElementById('phone').value;
@@ -78,8 +80,6 @@ const handleSubmit = (event) => {
     }else if(contact==="Preferência de contato:"){
         errorMsg('Preferência de contato','' , 'Selecione o tipo de contato para retorno por favor!');
     }else{
-
-        setTimeout(addLoading, 3000);   
 
         fetch('https://api.sheetmonkey.io/form/6KQ8dDRaVNhm1WRV7EXtCu', {
 
