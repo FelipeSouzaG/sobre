@@ -79,7 +79,7 @@ const handleSubmit = (event) => {
         errorMsg('Preferência de contato','' , 'Selecione o tipo de contato para retorno por favor!');
     }else{
 
-        addLoading();    
+        setTimeout(addLoading, 3000);   
 
         fetch('https://api.sheetmonkey.io/form/6KQ8dDRaVNhm1WRV7EXtCu', {
 
